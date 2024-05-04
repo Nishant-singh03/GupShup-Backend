@@ -25,7 +25,9 @@ mongoose
     console.log(err);
   });
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin:"https://chat-gupshup-66dadd94a3a8.herokuapp.com",
+}));
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
